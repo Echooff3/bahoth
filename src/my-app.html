@@ -26,9 +26,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style>
       :host {
-        --app-primary-color: #4285f4;
-        --app-secondary-color: black;
-
+        --app-primary-color: #0c293b;
+        --app-secondary-color: #4ab7f2;
+        --app-drawer-content-container: {
+            color: var(--app-secondary-color);
+            background-color: var(--app-primary-color);
+        }
         display: block;
       }
 
@@ -41,6 +44,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .drawer-list {
+        background-color: #0c293b;
         margin: 0 20px;
       }
 
@@ -57,7 +61,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .drawer-list a.iron-selected {
-        color: black;
+        color: #fff;
 
         font-weight: bold;
       }
@@ -72,12 +76,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <app-drawer-layout fullbleed>
       <!-- Drawer content -->
-      <app-drawer>
+      <app-drawer align="right" swipe-open>
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="/view1">View One</a>
-          <a name="view2" href="/view2">View Two</a>
-          <a name="view3" href="/view3">View Three</a>
+          <a name="view1" href="/view1">Home</a>
+          <a name="view2" href="/view2">Character Plates</a>
+          <a name="view3" href="/view3">Tools</a>
         </iron-selector>
       </app-drawer>
 
@@ -86,8 +90,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
+            <div main-title>Betrayal at House on the Hill</div>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div main-title>My App</div>
           </app-toolbar>
         </app-header>
 

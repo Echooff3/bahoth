@@ -9,6 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/social-media-icons/social-media-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view1">
@@ -18,20 +20,41 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
 
         padding: 10px;
+
+        text-align: center;
+      }
+      .holder > social-media-icons {
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
     </style>
 
     <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <img src="../images/manifest/large.png" />
+      <h1>You Found Me!</h1>
+      <p>Hopefully you find these tools useful. Want to make it your own? Fork me on github.</p>
+      <div class="holder">
+        <social-media-icons on-tap="openGit" icon="github" color="#4ab7f2"></social-media-icons>
+        <social-media-icons on-tap="openTwitter" icon="twitter" color="#4ab7f2"></social-media-icons>
+      </div>
+    </div>
+    <div class="card">
+      <h1>These tools work offline.</h1>
+      <p>You can save this app on your mobile device and use it any time!</p>
+      <p>Progressive Web Applications take advantage of new technologies to bring the best of mobile sites and native applications to users. They're reliable, fast, and engaging.</p>
+      <p>Learn more here: <a href="https://developers.google.com/web/progressive-web-apps/" target="blank">developers.google.com</a></p>
     </div>
   </template>
 
   <script>
     Polymer({
-      is: 'my-view1'
+      is: 'my-view1',
+      openGit: function () {
+        window.location.href = "https://github.com/Echooff3/bahoth"
+      },
+      openTwitter: function () {
+        window.location.href = "https://twitter.com/skibolicious"
+      }
     });
   </script>
 </dom-module>

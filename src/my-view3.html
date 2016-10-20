@@ -22,16 +22,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div class="card">
-      <div class="circle">3</div>
-      <h1>View Three</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+      <div class="circle">?</div>
+      <h1>// TODO</h1>
+      <p>I'll add stuff here when I think of it.</p>
+      <p>Got a suggestion?</p>
+      <div class="holder">
+        <social-media-icons on-tap="openGit" icon="github" color="#4ab7f2"></social-media-icons>
+        <social-media-icons on-tap="openTwitter" icon="twitter" color="#4ab7f2"></social-media-icons>
+      </div>
     </div>
   </template>
 
   <script>
     Polymer({
-      is: 'my-view3'
+      is: 'my-view3',
+      openGit: function () {
+        window.location.href = "https://github.com/Echooff3/bahoth"
+      },
+      openTwitter: function () {
+        window.location.href = "https://twitter.com/skibolicious"
+      }
     });
   </script>
 </dom-module>
