@@ -1,0 +1,18 @@
+{
+  "players": [
+    { "name":"Sample 000", 
+      "image":"images/players/000.png", 
+      "speed": {"index": "5", "range": [-1,4,4,4,5,6,7,7,8]},
+      "might": {"index": "3", "range": [-1,2,3,3,4,5,6,6,7]},
+      "sanity": {"index": "3", "range": [-1,1,2,3,4,5,5,5,7]},
+      "knowledge": {"index": "3", "range": [-1,2,3,3,4,5,5,5,7]}
+    },
+    { "name":"Sample 001", 
+      "image":"images/players/001.png", 
+      "speed": {"index": "5", "range": [-1,4,4,4,5,6,7,7,8]},
+      "might": {"index": "5", "range": [-1,2,3,3,4,5,6,6,7]},
+      "sanity": {"index": "5", "range": [-1,1,2,3,4,5,5,5,7]},
+      "knowledge": {"index": "5", "range": [-1,2,3,3,4,5,5,5,7]}
+    }
+  ]
+}
